@@ -5,7 +5,7 @@ puts "Welcome to Tic Tac Toe!"
 
 TicTacToeAI.new.start
 
-=begin
+
 def start
   computer_one = Players::Computer.new("X")
   computer_two = Players::Computer.new("O")
@@ -80,4 +80,3 @@ def replay?
 end
 
 start
-=end
