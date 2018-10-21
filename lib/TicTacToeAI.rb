@@ -3,8 +3,8 @@ class TicTacToeAI
   end
   
   @computer_one = Players::Computer.new("X")
-  @@computer_two = Players::Computer.new("O")
-  human_one = Players::Human.new("X")
+  @computer_two = Players::Computer.new("O")
+  @human_one = Players::Human.new("X")
   
   def start
     puts "How many players? (0, 1 or 2)"
