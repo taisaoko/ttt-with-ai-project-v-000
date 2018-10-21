@@ -44,10 +44,6 @@ class TicTacToeAI
   end
   
   def go_first
-    computer_one = Players::Computer.new("X")
-    computer_two = Players::Computer.new("O")
-    human_one = Players::Human.new("X")
-    
     puts "Would you like to take the first turn? Please input Y or N."
     answer = gets.chomp
     case answer
@@ -75,4 +71,4 @@ class TicTacToeAI
     end
   end
   
-  start
+end
