@@ -1,4 +1,8 @@
-def start
+class TicTacToeAI
+  def initialize 
+  end
+  
+  def start
   computer_one = Players::Computer.new("X")
   computer_two = Players::Computer.new("O")
   human_one = Players::Human.new("X")
