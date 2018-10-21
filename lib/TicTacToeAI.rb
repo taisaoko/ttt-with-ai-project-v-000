@@ -2,8 +2,8 @@ class TicTacToeAI
   def initialize 
   end
   
-  computer_one = Players::Computer.new("X")
-  computer_two = Players::Computer.new("O")
+  @computer_one = Players::Computer.new("X")
+  @@computer_two = Players::Computer.new("O")
   human_one = Players::Human.new("X")
   
   def start
@@ -11,7 +11,7 @@ class TicTacToeAI
     input = gets.chomp
     case input
       when "0"
-        Game.new(computer_one, computer_two).play
+        Game.new(@computer_one, @computer_two).play
       when "1"
         go_first
       when "2"
@@ -22,7 +22,7 @@ class TicTacToeAI
         draw = 0
   
         100.times do
-          wargame = Game.new(computer_one, computer_two)
+          wargame = Game.new(@computer_one, @computer_two)
           wargame.play
   
           if wargame.winner == "X"
@@ -48,9 +48,9 @@ class TicTacToeAI
     answer = gets.chomp
     case answer
       when "Y"
-        Game.new(human_one, computer_two).play
+        Game.new(@human_one, @computer_two).play
       when "N"
-        Game.new(computer_one).play
+        Game.new(@computer_one).play
       else
         puts "Invalid entry, please try again."
         start
